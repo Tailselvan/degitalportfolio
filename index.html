@@ -16,9 +16,28 @@
             Aralvaimozhi <br>
             bsc computer science
         </p>
-       
     </div>
     <div id="content2">
         <img src="arignar-anna-college-kanyakumari-arignar-anna-college-2.jpg" alt="TAMIL" width="535px" height="400px">
+                       <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor=>
+            {
+                anchor.addEventListener('click',function(e){
+                    e.preventDefault();
+                    const targetid=
+            this.getAttribute('href').substring(1);
+                    const targetElement=
+            document.getElementById(targetid);
+                    if(targetElement){
+                        window.scrollTo({
+                            top:
+            targetElement.offsetTop,
+                            behavior:'smooth'
+                        });
+                    }
+                });
+            });
+            </script>
+
     </body>
     </html>
